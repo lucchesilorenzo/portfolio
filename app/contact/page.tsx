@@ -4,7 +4,7 @@ import ContactForm from "@/components/contact-form";
 function Contact() {
   return (
     <section className="space-y-8">
-      <h1 className="text-center text-4xl font-semibold tracking-tight">
+      <h1 className="text-center text-3xl font-semibold tracking-tight lg:text-4xl">
         Contact me
       </h1>
       <p className="text-muted-foreground">

@@ -32,7 +32,6 @@ function ContactForm() {
 
   async function onSubmit(data: ContactFormSchema) {
     const result = await sendEmail(data);
-    console.log(data);
 
     if (result?.error) {
       toast.error("Something went wrong. Please try again later.");

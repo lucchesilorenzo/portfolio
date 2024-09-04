@@ -13,9 +13,9 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { Button } from "./ui/button";
 
-function Projects() {
+function RecentProject() {
   return (
-    <section className="space-y-8">
+    <section className="w-full space-y-8">
       <h1 className="text-2xl font-semibold tracking-tight">Recent projects</h1>
       <Carousel opts={{ align: "start", loop: true }}>
         <CarouselContent>
@@ -23,7 +23,7 @@ function Projects() {
             .filter((project) => project.imageUrl !== "")
             .map((project) => (
               <CarouselItem key={project.title}>
-                <div className="relative h-[420px]">
+                <div className="relative h-[260px] sm:h-[340px] md:h-[380px] lg:h-[380px] xl:h-[420px]">
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -68,4 +68,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default RecentProject;

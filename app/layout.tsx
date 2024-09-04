@@ -33,10 +33,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="mx-auto flex max-w-2xl flex-col space-y-16 px-4">
+          <main className="mx-auto flex flex-col items-center justify-center space-y-16 px-14 lg:max-w-2xl lg:px-4">
             {children}
+            <Separator className="mx-auto my-16 w-full lg:max-w-2xl" />
           </main>
-          <Separator className="mx-auto my-16 flex max-w-2xl items-center justify-between" />
           <Footer />
         </ThemeProvider>
         <Toaster position="top-right" />

@@ -1,6 +1,6 @@
 "use server";
 
-import ContactFormEmail from "@/email/contact-form-email";
+import ContactFormEmail from "@/emails/contact-form-email";
 import { Resend } from "resend";
 import { type ContactFormSchema, formSchema } from "./schemas";
 

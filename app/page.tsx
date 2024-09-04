@@ -1,6 +1,6 @@
 import Intro from "@/components/intro";
 import About from "@/components/about";
-import Projects from "@/components/projects";
+import RecentProjects from "@/components/recent-projects";
 import Skills from "@/components/skills";
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
     <>
       <Intro />
       <About />
-      <Projects />
+      <RecentProjects />
       <Skills />
     </>
   );

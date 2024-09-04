@@ -46,7 +46,7 @@ function ProjectCards() {
           <CardContent>
             <p className="text-muted-foreground">{project.description}</p>
           </CardContent>
-          <CardFooter className="flex items-center justify-between">
+          <CardFooter className="flex justify-between">
             <div className="flex flex-wrap gap-3">
               {project.tags.map((tag) => (
                 <Badge
@@ -58,8 +58,13 @@ function ProjectCards() {
                 </Badge>
               ))}
             </div>
-            <div className="space-x-2">
-              <Button variant="ghost" size="icon" className="p-2" asChild>
+            <div className="flex flex-col items-center gap-2 sm:flex-row">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="items-baseline p-2"
+                asChild
+              >
                 <Link href={project.githubUrl} target="_blank">
                   <FaGithub className="h-6 w-6" />
                 </Link>

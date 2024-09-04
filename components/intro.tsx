@@ -4,9 +4,9 @@ import profile from "@/public/profile.jpeg";
 
 function Intro() {
   return (
-    <section className="flex items-center justify-between">
-      <div className="mt-[-30px]">
-        <h1 className="mb-2 text-4xl font-bold tracking-tight">
+    <section className="flex w-full flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:justify-between">
+      <div className="text-center lg:mt-[-30px] lg:text-start">
+        <h1 className="mb-2 text-3xl font-bold tracking-tight lg:text-4xl">
           Lorenzo Lucchesi
         </h1>
         <h2 className="text-lg tracking-tight">Web Developer</h2>
