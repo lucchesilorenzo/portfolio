@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useFormStatus } from "react-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
@@ -22,7 +21,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import { sendEmail } from "@/lib/actions";
 
 function ContactForm() {
-  const { pending } = useFormStatus();
   const form = useForm<ContactFormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,6 +32,7 @@ function ContactForm() {
 
   async function onSubmit(data: ContactFormSchema) {
     const result = await sendEmail(data);
+    console.log(data);
 
     if (result?.error) {
       toast.error("Something went wrong. Please try again later.");
@@ -90,9 +89,9 @@ function ContactForm() {
           <Button
             type="submit"
             className="rounded-sm px-6 py-2"
-            disabled={pending}
+            disabled={form.formState.isSubmitting}
           >
-            {!pending ? (
+            {!form.formState.isSubmitting ? (
               <>
                 <span className="mr-2">Send</span>
                 <FaArrowRight />

@@ -10,28 +10,48 @@ import {
   Preview,
   Section,
   Text,
+  Tailwind,
 } from "@react-email/components";
-import { Tailwind } from "@react-email/components";
 
 type ContactFormEmailProps = ContactFormSchema;
 
 function ContactFormEmail({ name, email, message }: ContactFormEmailProps) {
+  const formattedMessage = message.split("\n").map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      <br />
+    </React.Fragment>
+  ));
+
   return (
     <Html>
       <Head />
       <Preview>New message from your portfolio</Preview>
-      <Body>
-        <Container>
-          <Section>
-            <Heading>
-              You received the following message from the contact form
-            </Heading>
-            <Text>{message}</Text>
-            <Hr />
-            <Text>The sender&apos;s email is: {email}</Text>
-          </Section>
-        </Container>
-      </Body>
+      <Tailwind>
+        <Body className="bg-gray-100">
+          <Container className="p-4">
+            <Section className="mb-6 text-center">
+              <Heading className="text-xl font-semibold text-gray-700">
+                You have a new message from{" "}
+                <span className="font-bold text-blue-500">{name}</span>
+              </Heading>
+            </Section>
+
+            <Section className="rounded-lg bg-white p-6 shadow-lg">
+              <Text className={"text-base text-gray-800"}>
+                {formattedMessage}
+              </Text>
+
+              <Hr className="border-gray-200" />
+
+              <Text className="text-sm text-gray-500">
+                This email was sent from{" "}
+                <span className="font-medium text-blue-500">{email}</span>
+              </Text>
+            </Section>
+          </Container>
+        </Body>
+      </Tailwind>
     </Html>
   );
 }

@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import React from "react";
 import { Toaster } from "sonner";
 import "./globals.css";
+import { Separator } from "@/components/ui/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <main className="mx-auto flex max-w-2xl flex-col space-y-16 px-4">
             {children}
           </main>
+          <Separator className="mx-auto my-16 flex max-w-2xl items-center justify-between" />
           <Footer />
         </ThemeProvider>
         <Toaster position="top-right" />
