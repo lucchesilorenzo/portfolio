@@ -5,7 +5,7 @@ import { skillsData } from "@/lib/data";
 function Skills() {
   return (
     <section className="space-y-8">
-      <h1 className="text-2xl font-semibold tracking-tight">Skills</h1>
+      <h2 className="text-2xl font-semibold tracking-tight">Skills</h2>
       <div className="space-y-4">
         <p className="text-muted-foreground">
           Here&apos;s a snapshot of the programming languages, libraries, and

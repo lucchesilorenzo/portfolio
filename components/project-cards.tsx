@@ -46,7 +46,7 @@ function ProjectCards() {
           <CardContent>
             <p className="text-muted-foreground">{project.description}</p>
           </CardContent>
-          <CardFooter className="flex justify-between">
+          <CardFooter className="flex flex-wrap justify-between gap-2 md:flex-nowrap">
             <div className="flex flex-wrap gap-3">
               {project.tags.map((tag) => (
                 <Badge
@@ -58,7 +58,7 @@ function ProjectCards() {
                 </Badge>
               ))}
             </div>
-            <div className="flex flex-col items-center gap-2 sm:flex-row">
+            <div className="flex items-center gap-2">
               <Button
                 variant="ghost"
                 size="icon"
@@ -66,13 +66,13 @@ function ProjectCards() {
                 asChild
               >
                 <Link href={project.githubUrl} target="_blank">
-                  <FaGithub className="h-6 w-6" />
+                  <FaGithub size={24} />
                 </Link>
               </Button>
               {project.liveUrl && (
                 <Button variant="ghost" size="icon" className="p-2" asChild>
                   <Link href={project.liveUrl} target="_blank">
-                    <TbWorld className="h-6 w-6" />
+                    <TbWorld size={24} />
                   </Link>
                 </Button>
               )}

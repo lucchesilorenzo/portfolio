@@ -13,19 +13,24 @@ import { navLinks } from "@/lib/data";
 import { IoMdClose } from "react-icons/io";
 
 function MobileNavigation() {
-  const [iconChange, seticonChange] = useState(false);
+  const [iconChange, setIconChange] = useState(false);
 
   return (
-    <DropdownMenu open={iconChange} onOpenChange={seticonChange}>
+    <DropdownMenu open={iconChange} onOpenChange={setIconChange}>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost">
           {iconChange ? <IoMdClose size={24} /> : <RxHamburgerMenu size={24} />}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <ul className="flex flex-col gap-2">
+      <DropdownMenuContent className="absolute right-[1px] border-none bg-background/80 p-4 backdrop-blur-lg">
+        <ul className="flex flex-col gap-4">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="font-medium">
+            <Link
+              key={link.name}
+              href={link.href}
+              className="font-medium"
+              onClick={() => setIconChange((iconChange) => !iconChange)}
+            >
               {link.name}
             </Link>
           ))}

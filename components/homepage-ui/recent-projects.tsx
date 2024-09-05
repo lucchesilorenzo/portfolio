@@ -11,12 +11,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
-function RecentProject() {
+function RecentProjects() {
   return (
     <section className="w-full space-y-8">
-      <h1 className="text-2xl font-semibold tracking-tight">Recent projects</h1>
+      <h2 className="text-2xl font-semibold tracking-tight">Recent projects</h2>
       <Carousel opts={{ align: "start", loop: true }}>
         <CarouselContent>
           {projectsData
@@ -38,7 +38,7 @@ function RecentProject() {
                       asChild
                     >
                       <Link href={project.githubUrl} target="_blank">
-                        <FaGithub className="h-6 w-6" />
+                        <FaGithub size={24} />
                       </Link>
                     </Button>
                     {project.liveUrl && (
@@ -49,7 +49,7 @@ function RecentProject() {
                         asChild
                       >
                         <Link href={project.liveUrl} target="_blank">
-                          <TbWorld className="h-6 w-6" />
+                          <TbWorld size={24} />
                         </Link>
                       </Button>
                     )}
@@ -68,4 +68,4 @@ function RecentProject() {
   );
 }
 
-export default RecentProject;
+export default RecentProjects;

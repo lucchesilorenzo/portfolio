@@ -19,6 +19,16 @@ export const navLinks = [
   },
 ] as const;
 
+export const experiencesData = [
+  {
+    title: "Front-end Developer",
+    company: "Proxima Robotics",
+    date: "April 2024 - July 2024",
+    description:
+      "Developed an interactive web application for real-time monitoring of laser scans and visualizing points detected by a robot's camera, displayed in both 2D and 3D environments using React, Konva.js, and React Three Fiber.",
+  },
+] as const;
+
 export const projectsData = [
   {
     title: "Easy Car Rental",
@@ -127,17 +137,17 @@ export const footerLinks = [
   {
     name: "Home",
     href: "/",
-    icon: React.createElement(IoMdHome, { className: "h-6 w-6" }),
+    icon: React.createElement(IoMdHome, { size: 24 }),
   },
   {
     name: "Projects",
     href: "/projects",
-    icon: React.createElement(GoProjectRoadmap, { className: "h-6 w-6" }),
+    icon: React.createElement(GoProjectRoadmap, { size: 24 }),
   },
   {
     name: "CV",
     href: "",
-    icon: React.createElement(LuFileSpreadsheet, { className: "h-6 w-6" }),
+    icon: React.createElement(LuFileSpreadsheet, { size: 24 }),
   },
 ] as const;
 
@@ -145,11 +155,11 @@ export const contactsData = [
   {
     name: "GitHub",
     url: "https://github.com/lucchesilorenzo",
-    icon: React.createElement(FaGithub, { className: "h-6 w-6" }),
+    icon: React.createElement(FaGithub, { size: 24 }),
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/lorenzolucchesi/",
-    icon: React.createElement(FaLinkedinIn, { className: "h-6 w-6" }),
+    url: "https://www.linkedin.com/in/lorenzolucchesi",
+    icon: React.createElement(FaLinkedinIn, { size: 24 }),
   },
 ];
