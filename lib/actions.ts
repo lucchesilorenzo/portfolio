@@ -1,6 +1,7 @@
 "use server";
 
 import ContactFormEmail from "@/emails/contact-form-email";
+import { randomUUID } from "crypto";
 import { Resend } from "resend";
 import { type ContactFormSchema, formSchema } from "./schemas";
 
@@ -17,9 +18,12 @@ export async function sendEmail(data: ContactFormSchema) {
     const { name, email, message } = result.data;
     const { data, error } = await resend.emails.send({
       from: "Your Portfolio <onboarding@resend.dev>",
-      to: [email],
+      to: "lorenzolucchesi3@gmail.com",
       subject: "Message from contact form",
       react: ContactFormEmail({ name, email, message }),
+      headers: {
+        "X-Entity-Ref-ID": randomUUID(),
+      },
     });
 
     if (error) throw new Error(error.message);

@@ -1,32 +1,28 @@
-import { contactsData, footerLinks } from "@/lib/data";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { contactsData, footerLinks } from "@/lib/data";
 import { Button } from "./ui/button";
 
 function Footer() {
   return (
     <footer className="my-20 flex flex-col items-center space-y-6">
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="grid grid-cols-2 items-center sm:flex sm:flex-wrap">
         {footerLinks.map((link) => (
-          <React.Fragment key={link.name}>
-            <Button variant="link" className="active-none space-x-2" asChild>
-              <Link href={link.href}>
-                <span>{link.icon}</span>
-                <span>{link.name}</span>
-              </Link>
-            </Button>
-          </React.Fragment>
+          <Button key={link.name} variant="link" className="space-x-2" asChild>
+            <Link href={link.href}>
+              <span>{link.icon}</span>
+              <span>{link.name}</span>
+            </Link>
+          </Button>
         ))}
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2">
         {contactsData.map((contact) => (
-          <React.Fragment key={contact.name}>
-            <Button variant="ghost" size="icon" className="active-none" asChild>
-              <Link href={contact.url} target="_blank">
-                {contact.icon}
-              </Link>
-            </Button>
-          </React.Fragment>
+          <Button key={contact.name} variant="ghost" size="icon" asChild>
+            <Link href={contact.url} target="_blank">
+              {contact.icon}
+            </Link>
+          </Button>
         ))}
       </div>
       <div>

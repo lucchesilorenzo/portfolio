@@ -34,7 +34,7 @@ function RecentProjects() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="active-none p-2"
+                      className="p-2"
                       asChild
                     >
                       <Link href={project.githubUrl} target="_blank">
@@ -45,7 +45,7 @@ function RecentProjects() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="active-none p-2"
+                        className="p-2"
                         asChild
                       >
                         <Link href={project.liveUrl} target="_blank">

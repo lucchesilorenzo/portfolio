@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { IoMdHome } from "react-icons/io";
 import { LuFileSpreadsheet } from "react-icons/lu";
+import { FiInbox } from "react-icons/fi";
 
 export const navLinks = [
   {
@@ -33,11 +34,11 @@ export const projectsData = [
   {
     title: "Easy Car Rental",
     description:
-      "Easy Car Rental is a web application designed to provide a seamless and luxurious car rental experience. The platform offers a wide range of premium vehicles, allowing users to easily browse, select, and reserve the perfect car for their journey.",
+      "Easy Car Rental is a web application that offers a wide range of premium vehicles, allowing users to easily browse, select, and reserve the perfect car for their journey.",
     tags: ["Next.js", "Tailwind", "Supabase", "Auth.js"],
     imageUrl: "/easy-car-rental.png",
     githubUrl: "https://github.com/lucchesilorenzo/easy-car-rental",
-    liveUrl: "https://easy-car-rental.vercel.app/",
+    liveUrl: "https://easy-car-rental.vercel.app",
   },
   {
     title: "Contact Manager",
@@ -121,6 +122,8 @@ export const skillsData = [
       "React Hook Form",
       "Zod",
       "Auth.js",
+      "React Email",
+      "Resend",
     ],
   },
   {
@@ -145,8 +148,13 @@ export const footerLinks = [
     icon: React.createElement(GoProjectRoadmap, { size: 24 }),
   },
   {
+    name: "Contact",
+    href: "/contact",
+    icon: React.createElement(FiInbox, { size: 24 }),
+  },
+  {
     name: "CV",
-    href: "https://rxresu.me/lorenzolucchesi/cv-lorenzo-lucchesi-en",
+    href: "https://drive.google.com/file/d/196oQAy-MC-YQ8nOUyrhRUp2LmXQT76GN/view?usp=sharing",
     icon: React.createElement(LuFileSpreadsheet, { size: 24 }),
   },
 ] as const;
@@ -162,4 +170,4 @@ export const contactsData = [
     url: "https://www.linkedin.com/in/lorenzolucchesi",
     icon: React.createElement(FaLinkedinIn, { size: 24 }),
   },
-];
+] as const;

@@ -7,7 +7,6 @@ import {
   Heading,
   Hr,
   Container,
-  Preview,
   Section,
   Text,
   Tailwind,
@@ -26,7 +25,6 @@ function ContactFormEmail({ name, email, message }: ContactFormEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>New message from your portfolio</Preview>
       <Tailwind>
         <Body className="bg-gray-100">
           <Container className="p-4">
