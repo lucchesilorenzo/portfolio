@@ -146,7 +146,7 @@ export const footerLinks = [
   },
   {
     name: "CV",
-    href: "",
+    href: "https://rxresu.me/lorenzolucchesi/cv-lorenzo-lucchesi-en",
     icon: React.createElement(LuFileSpreadsheet, { size: 24 }),
   },
 ] as const;

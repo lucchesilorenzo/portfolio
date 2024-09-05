@@ -12,6 +12,7 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
+      className="active-none"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <Sun

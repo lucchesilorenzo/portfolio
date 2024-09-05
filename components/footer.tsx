@@ -9,8 +9,8 @@ function Footer() {
       <div className="flex flex-wrap items-center justify-center">
         {footerLinks.map((link) => (
           <React.Fragment key={link.name}>
-            <Button variant="link" asChild>
-              <Link href={link.href} className="space-x-2">
+            <Button variant="link" className="active-none space-x-2" asChild>
+              <Link href={link.href}>
                 <span>{link.icon}</span>
                 <span>{link.name}</span>
               </Link>
@@ -21,7 +21,7 @@ function Footer() {
       <div className="flex flex-wrap items-center justify-center gap-2">
         {contactsData.map((contact) => (
           <React.Fragment key={contact.name}>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" className="active-none" asChild>
               <Link href={contact.url} target="_blank">
                 {contact.icon}
               </Link>

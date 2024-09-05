@@ -60,9 +60,9 @@ function ProjectCards() {
             </div>
             <div className="flex items-center gap-2">
               <Button
-                variant="ghost"
+                variant="outline"
                 size="icon"
-                className="items-baseline p-2"
+                className="active-none items-baseline p-2"
                 asChild
               >
                 <Link href={project.githubUrl} target="_blank">
@@ -70,7 +70,12 @@ function ProjectCards() {
                 </Link>
               </Button>
               {project.liveUrl && (
-                <Button variant="ghost" size="icon" className="p-2" asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="active-none p-2"
+                  asChild
+                >
                   <Link href={project.liveUrl} target="_blank">
                     <TbWorld size={24} />
                   </Link>
