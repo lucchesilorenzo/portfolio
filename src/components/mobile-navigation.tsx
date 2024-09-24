@@ -22,7 +22,7 @@ export default function MobileNavigation() {
           {iconChange ? <IoMdClose size={24} /> : <RxHamburgerMenu size={24} />}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="absolute right-[1px] border-none bg-background/80 p-4 backdrop-blur-lg">
+      <DropdownMenuContent className="border-none bg-background/80 p-4 backdrop-blur-lg">
         <ul className="flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link

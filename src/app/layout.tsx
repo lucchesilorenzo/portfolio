@@ -36,9 +36,9 @@ export default function RootLayout({
           <SearchContextProvider>
             <Header />
 
-            <main className="mx-auto flex flex-col items-center justify-center space-y-16 px-14 lg:max-w-2xl lg:px-4">
+            <main className="mx-auto flex flex-col items-center justify-center space-y-20 px-5 lg:max-w-6xl lg:px-4">
               {children}
-              <Separator className="mx-auto my-16 w-full lg:max-w-2xl" />
+              <Separator className="mx-auto my-16 w-full lg:max-w-6xl" />
             </main>
 
             <Footer />

@@ -41,9 +41,9 @@ export const projectsData = [
       "Tailwind",
       "Prisma",
       "Auth.js",
-      "Shadcn/ui",
-      "RHF",
+      "React Hook Form",
       "Zod",
+      "Shadcn/ui",
     ],
     imageUrl: "/petcare-solutions.png",
     githubUrl: "https://github.com/lucchesilorenzo/petcare-solutions",
@@ -53,7 +53,7 @@ export const projectsData = [
     title: "Easy Car Rental",
     description:
       "Easy Car Rental is a web application that offers a wide range of premium vehicles, allowing users to easily browse, select, and reserve the perfect car for their journey.",
-    tags: ["Next.js", "Tailwind", "Supabase", "Auth.js"],
+    tags: ["JavaScript", "Next.js", "Tailwind", "Supabase", "Auth.js"],
     imageUrl: "/easy-car-rental.png",
     githubUrl: "https://github.com/lucchesilorenzo/easy-car-rental",
     liveUrl: "https://easy-car-rental.vercel.app",
@@ -63,10 +63,11 @@ export const projectsData = [
     description:
       "Contact Manager is a personal project designed to experiment with creating, reading, updating, and deleting (CRUD) operations for managing contacts.",
     tags: [
+      "JavaScript",
       "React",
       "Tailwind",
       "Supabase",
-      "RHF",
+      "React Hook Form",
       "React Router",
       "Tanstack Query",
       "Zod",
@@ -79,7 +80,7 @@ export const projectsData = [
     title: "React Pizzeria",
     description:
       "React Pizzeria is a web application for ordering pizzas. The app provides an intuitive interface to browse the pizza menu, add items to the cart, create new orders, and view the status of existing orders.",
-    tags: ["React", "Tailwind", "React Router", "Redux"],
+    tags: ["JavaScript", "React", "Tailwind", "React Router", "Redux"],
     imageUrl: "/react-pizzeria.png",
     githubUrl: "https://github.com/lucchesilorenzo/react-pizzeria",
     liveUrl: "",
@@ -88,7 +89,7 @@ export const projectsData = [
     title: "WatchWise",
     description:
       "WatchWise is a full-stack project designed for tracking movies and TV shows.",
-    tags: ["Python", "Django", "Bootstrap"],
+    tags: ["Python", "Django", "HTML", "CSS", "Bootstrap"],
     imageUrl: "/watchwise.png",
     githubUrl: "https://github.com/lucchesilorenzo/watchwise",
     liveUrl: "",
@@ -105,7 +106,7 @@ export const projectsData = [
     title: "Bank Account Manager",
     description:
       "Bank Account Manager is a web application that allows you to manage your bank account by performing various operations such as deposits, withdrawals, loan requests, and creating new customers. ",
-    tags: ["React", "Redux"],
+    tags: ["JavaScript", "React", "Redux"],
     imageUrl: "",
     githubUrl: "https://github.com/lucchesilorenzo/bank-account-manager",
     liveUrl: "",
@@ -114,7 +115,7 @@ export const projectsData = [
     title: "The Energy Bulletin",
     description:
       "This project is a simple post manager that manages posts, including adding new posts, filtering posts based on a search query, and clearing all posts.",
-    tags: ["React", "Context API"],
+    tags: ["JavaScript", "React", "Context API"],
     imageUrl: "",
     githubUrl: "https://github.com/lucchesilorenzo/the-energy-bulletin",
     liveUrl: "",
@@ -123,7 +124,7 @@ export const projectsData = [
     title: "Travel Tracker",
     description:
       "Travel Tracker is a web application that allows you to track your travels by marking locations on a map. You can get your current position, add markers manually by clicking on the map, and clear all markers.",
-    tags: ["React", "React Router"],
+    tags: ["JavaScript", "React", "React Router"],
     imageUrl: "",
     githubUrl: "https://github.com/lucchesilorenzo/travel-tracker",
     liveUrl: "",
@@ -148,8 +149,6 @@ export const skillsData = [
       "React Hook Form",
       "Zod",
       "Auth.js",
-      "React Email",
-      "Resend",
     ],
   },
   {

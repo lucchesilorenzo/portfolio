@@ -4,14 +4,14 @@ import Experience from "@/components/experience";
 import RecentProjects from "@/components/recent-projects";
 import Skills from "@/components/skills";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Intro />
       <About />
-      <Experience />
       <RecentProjects />
       <Skills />
+      <Experience />
     </>
   );
 }

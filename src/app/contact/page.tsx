@@ -7,7 +7,7 @@ export default function Contact() {
       <h1 className="text-center text-3xl font-semibold tracking-tight lg:text-4xl">
         Contact me
       </h1>
-      <p className="text-muted-foreground">
+      <p className="text-justify text-muted-foreground">
         Please contact me directly at{" "}
         <span className="underline">lorenzolucchesi3@gmail.com</span> or through
         this form.

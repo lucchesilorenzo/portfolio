@@ -1,14 +1,15 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
 import { navLinks } from "@/lib/data";
-import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileNavigation from "./mobile-navigation";
-import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { useSearchQueryContext } from "@/lib/hooks";
 
 export default function Navigation() {
+  const { handleClearSearchQuery } = useSearchQueryContext();
   const pathname = usePathname();
 
   return (
@@ -17,6 +18,7 @@ export default function Navigation() {
         {navLinks.map((link) => (
           <li key={link.name}>
             <Button
+              onClick={handleClearSearchQuery}
               variant="ghost"
               className={cn(
                 "transition-all ease-in-out",

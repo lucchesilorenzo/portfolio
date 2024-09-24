@@ -27,7 +27,7 @@ export default function Experience() {
                   <p className="mb-2 text-base font-normal text-foreground">
                     {experience.company}
                   </p>
-                  <p className="text-sm font-normal text-muted-foreground">
+                  <p className="text-justify text-sm font-normal text-muted-foreground">
                     {experience.description}
                   </p>
                 </div>

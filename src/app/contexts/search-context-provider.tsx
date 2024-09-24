@@ -9,6 +9,7 @@ type SearchContextProviderProps = {
 type TSearchContext = {
   searchQuery: string;
   handleChangeSearchQuery: (searchQuery: string) => void;
+  handleClearSearchQuery: () => void;
 };
 
 export const SearchContext = createContext<TSearchContext | null>(null);
@@ -22,11 +23,16 @@ export default function SearchContextProvider({
     setSearchQuery(searchQuery);
   }
 
+  function handleClearSearchQuery() {
+    setSearchQuery("");
+  }
+
   return (
     <SearchContext.Provider
       value={{
         searchQuery,
         handleChangeSearchQuery,
+        handleClearSearchQuery,
       }}
     >
       {children}
