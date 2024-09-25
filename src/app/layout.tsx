@@ -1,12 +1,12 @@
-import React from "react";
-import type { Metadata } from "next";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Separator } from "@/components/ui/separator";
-import SearchContextProvider from "./contexts/search-context-provider";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import React from "react";
 import { Toaster } from "sonner";
+import SearchContextProvider from "./contexts/search-context-provider";
 import "./styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

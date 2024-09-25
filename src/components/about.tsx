@@ -1,8 +1,6 @@
-import React from "react";
-
 export default function About() {
   return (
-    <section className="space-y-8">
+    <section className="my-8 space-y-4">
       <h2 className="text-2xl font-semibold tracking-tight">About me</h2>
       <p className="text-justify text-muted-foreground">
         I am a passionate and versatile developer, with a strong focus on{" "}

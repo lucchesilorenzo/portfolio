@@ -1,16 +1,16 @@
-import React from "react";
 import { type TContactFormSchema } from "@/lib/validations";
 import {
-  Html,
   Body,
+  Container,
   Head,
   Heading,
   Hr,
-  Container,
+  Html,
   Section,
-  Text,
   Tailwind,
+  Text,
 } from "@react-email/components";
+import React from "react";
 
 type ContactFormEmailProps = TContactFormSchema;
 

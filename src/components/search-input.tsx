@@ -8,7 +8,7 @@ export default function SearchInput() {
   const { searchQuery, handleChangeSearchQuery } = useSearchQueryContext();
 
   return (
-    <form className="relative max-w-sm">
+    <div className="relative max-w-sm">
       <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
       <Input
         type="text"
@@ -25,6 +25,6 @@ export default function SearchInput() {
           <X className="h-6 w-6" />
         </button>
       )}
-    </form>
+    </div>
   );
 }

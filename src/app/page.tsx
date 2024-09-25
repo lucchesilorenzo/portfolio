@@ -1,5 +1,4 @@
-import Intro from "@/components/intro";
-import About from "@/components/about";
+import Hero from "@/components/hero";
 import Experience from "@/components/experience";
 import RecentProjects from "@/components/recent-projects";
 import Skills from "@/components/skills";
@@ -7,8 +6,7 @@ import Skills from "@/components/skills";
 export default function HomePage() {
   return (
     <>
-      <Intro />
-      <About />
+      <Hero />
       <RecentProjects />
       <Skills />
       <Experience />

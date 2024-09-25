@@ -5,9 +5,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "./ui/badge";
 import ProjectCardIcons from "./project-card-icons";
-import Image from "next/image";
+import ProjectImages from "./project-images";
+import Badges from "./badges";
 import { Separator } from "./ui/separator";
 
 type ProjectCardProps = {
@@ -30,7 +30,7 @@ export default function ProjectCard({
   liveUrl,
 }: ProjectCardProps) {
   return (
-    <Card key={title} className="w-full">
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
@@ -38,7 +38,7 @@ export default function ProjectCard({
         <p className="text-justify text-muted-foreground">{description}</p>
         {imageUrl && (
           <div className="relative mt-4 h-[260px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[500px]">
-            <Image src={imageUrl} alt={title} fill className="object-cover" />
+            <ProjectImages title={title} imageUrl={imageUrl} />
           </div>
         )}
         <Separator className="mt-4" />
@@ -46,13 +46,7 @@ export default function ProjectCard({
       <CardFooter className="flex flex-wrap justify-between gap-2 md:flex-nowrap">
         <div className="flex flex-wrap gap-3">
           {tags.map((tag) => (
-            <Badge
-              key={tag}
-              variant="secondary"
-              className="rounded-sm p-2 uppercase tracking-wide"
-            >
-              {tag}
-            </Badge>
+            <Badges key={tag} tag={tag} />
           ))}
         </div>
 

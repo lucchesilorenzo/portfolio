@@ -1,9 +1,14 @@
-import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 import ProjectCardIcons from "./project-card-icons";
 import ProjectCard from "./project-card";
-import { cn } from "@/lib/utils";
 import { projectsData } from "@/lib/data";
+import ProjectImages from "./project-images";
 
 export default function ProjectsCarousel() {
   return (
@@ -14,18 +19,11 @@ export default function ProjectsCarousel() {
           .map((project) => (
             <CarouselItem key={project.title}>
               <div className="relative h-[260px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[500px]">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  fill
-                  className={cn(
-                    "rounded-lg object-cover",
-                    project.title === "Easy Car Rental" ||
-                      project.title === "PetCare Solutions"
-                      ? "object-center"
-                      : "object-left",
-                  )}
+                <ProjectImages
+                  title={project.title}
+                  imageUrl={project.imageUrl}
                 />
+
                 <div className="absolute bottom-4 right-4 flex items-center gap-2">
                   <ProjectCardIcons
                     githubUrl={project.githubUrl}
@@ -43,6 +41,8 @@ export default function ProjectsCarousel() {
             </CarouselItem>
           ))}
       </CarouselContent>
+      <CarouselPrevious className="hidden lg:flex" />
+      <CarouselNext className="hidden lg:flex" />
     </Carousel>
   );
 }
