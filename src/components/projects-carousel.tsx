@@ -18,7 +18,7 @@ export default function ProjectsCarousel() {
           .filter((project) => project.imageUrl !== "")
           .map((project) => (
             <CarouselItem key={project.title}>
-              <div className="relative h-[260px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[500px]">
+              <div className="relative h-[260px] sm:h-[350px] md:h-[550px]">
                 <ProjectImages
                   title={project.title}
                   imageUrl={project.imageUrl}

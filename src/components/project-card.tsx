@@ -37,7 +37,7 @@ export default function ProjectCard({
       <CardContent>
         <p className="text-justify text-muted-foreground">{description}</p>
         {imageUrl && (
-          <div className="relative mt-4 h-[260px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[500px]">
+          <div className="relative mt-4 h-[260px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[550px]">
             <ProjectImages title={title} imageUrl={imageUrl} />
           </div>
         )}

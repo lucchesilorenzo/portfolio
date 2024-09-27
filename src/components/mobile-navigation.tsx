@@ -17,7 +17,7 @@ export default function MobileNavigation() {
   const [iconChange, setIconChange] = useState(false);
   const { handleClearSearchQuery } = useSearchQueryContext();
 
-  function handleIconToggleAndClear() {
+  function handleIconToggleAndClearSearchQuery() {
     setIconChange(!iconChange);
     handleClearSearchQuery();
   }
@@ -25,7 +25,7 @@ export default function MobileNavigation() {
   return (
     <DropdownMenu open={iconChange} onOpenChange={setIconChange}>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="p-0">
+        <Button variant="ghost">
           {iconChange ? <IoMdClose size={24} /> : <RxHamburgerMenu size={24} />}
         </Button>
       </DropdownMenuTrigger>
@@ -35,7 +35,7 @@ export default function MobileNavigation() {
             <Link
               key={link.name}
               href={link.href}
-              onClick={handleIconToggleAndClear}
+              onClick={handleIconToggleAndClearSearchQuery}
             >
               {link.name}
             </Link>
