@@ -1,9 +1,9 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FiInbox } from "react-icons/fi";
 import { GoProjectRoadmap } from "react-icons/go";
 import { IoMdHome } from "react-icons/io";
 import { LuFileSpreadsheet } from "react-icons/lu";
-import { FiInbox } from "react-icons/fi";
 
 export const navLinks = [
   {
@@ -38,7 +38,7 @@ export const projectsData = [
     tags: [
       "TypeScript",
       "Next.js",
-      "Tailwind",
+      "Tailwind CSS",
       "Prisma",
       "Auth.js",
       "React Hook Form",
@@ -53,10 +53,26 @@ export const projectsData = [
     title: "Easy Car Rental",
     description:
       "Easy Car Rental is a web application that offers a wide range of premium vehicles, allowing users to easily browse, select, and reserve the perfect car for their journey.",
-    tags: ["JavaScript", "Next.js", "Tailwind", "Supabase", "Auth.js"],
+    tags: ["JavaScript", "Next.js", "Tailwind CSS", "Supabase", "Auth.js"],
     imageUrl: "/easy-car-rental.png",
     githubUrl: "https://github.com/lucchesilorenzo/easy-car-rental",
     liveUrl: "https://easy-car-rental.vercel.app",
+  },
+  {
+    title: "Evento",
+    description:
+      "Evento is a web application that allows you to search and view events in different cities.",
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Prisma",
+      "Zod",
+      "Framer Motion",
+    ],
+    imageUrl: "/evento.png",
+    githubUrl: "https://github.com/lucchesilorenzo/evento",
+    liveUrl: "",
   },
   {
     title: "Contact Manager",
@@ -65,7 +81,7 @@ export const projectsData = [
     tags: [
       "JavaScript",
       "React",
-      "Tailwind",
+      "Tailwind CSS",
       "Supabase",
       "React Hook Form",
       "React Router",
@@ -80,7 +96,7 @@ export const projectsData = [
     title: "React Pizzeria",
     description:
       "React Pizzeria is a web application for ordering pizzas. The app provides an intuitive interface to browse the pizza menu, add items to the cart, create new orders, and view the status of existing orders.",
-    tags: ["JavaScript", "React", "Tailwind", "React Router", "Redux"],
+    tags: ["JavaScript", "React", "Tailwind CSS", "React Router", "Redux"],
     imageUrl: "/react-pizzeria.png",
     githubUrl: "https://github.com/lucchesilorenzo/react-pizzeria",
     liveUrl: "",
@@ -153,7 +169,7 @@ export const skillsData = [
   },
   {
     title: "Style frameworks and component libraries",
-    skills: ["Tailwind", "Shadcn/ui"],
+    skills: ["Tailwind CSS", "Shadcn/ui"],
   },
   {
     title: "Back-end stack",

@@ -12,6 +12,7 @@ export default function ProjectImages({ title, imageUrl }: ProjectImagesProps) {
       src={imageUrl}
       alt={title}
       fill
+      quality={100}
       className={cn(
         "rounded-lg object-cover",
         title === "React Pizzeria" || title === "Contact Manager"
